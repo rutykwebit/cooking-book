@@ -1,0 +1,19 @@
+    <mat-card  *ngFor="let rec of list" class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{rec.name}}</mat-card-title>
+            <mat-card-subtitle>{{rec.author}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="rec.picture_link">
+        <mat-card-content>
+            <mat-card-title>חומרים</mat-card-title>
+            <p *ngFor="let ing of rec.ingredients"></p>
+        </mat-card-content>
+        <mat-card-content>
+            <mat-card-title>אופן ההכנה</mat-card-title>
+                <p *ngFor="let pre of rec.Preparation">{{pre}}</p>
+            </mat-card-content>
+        <mat-card-actions>
+            <button mat-button >LIKE</button>
+            <button mat-button >SHARE</button>
+        </mat-card-actions>
+    </mat-card>
